@@ -4,7 +4,6 @@ class App extends Component {
   render() {
     return (
       <div>
-
         <div class="top">
           <h1 itemprop="name">NordicTrack Z 1300i Treadmill with 1-Year iFit Coach Included- Assembly Required</h1>
           <span class="bv-rating-stars-on bv-rating-stars bv-width-from-rating-stats-78" aria-hidden="true">  ★★★★★  </span>
