@@ -1,20 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class App extends Component {
+
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
       <div>
-        <div class="top">
-          <h1 class="name">NordicTrack Elite 1400 Treadmill with 1-Year iFit Coach Membership- Assembly Required</h1>
-          <span class="stars-rating">  ★★★★★  </span>
-          <span class="ratingValue">3.0</span>
-          <span class="reviewCount">(366)</span>
+        <div className="top">
+          <h1 className="name">NordicTrack Elite 1400 Treadmill with 1-Year iFit Coach Membership- Assembly Required</h1>
+          <span className="stars-rating">  ★★★★★  </span>
+          <span className="ratingValue">3.0</span>
+          <span className="reviewCount">(366)</span>
           <p>Item &nbsp;<span> 1312119</span></p>
         </div>
 
-        <div class="your-price">
-          <span class="text">Your Price </span>
-          <span class="value">$1,999.99</span>
+        <div className="your-price">
+          <span className="text">Your Price </span>
+          <span className="value">$1,999.99</span>
 	      </div>
 
 
@@ -31,10 +37,10 @@ class App extends Component {
           <span class="disc-value">500.00</span>
         </div> */}
 
-        <div class="features-container">
+        <div className="features-container">
           <p id="shipping-statement">Shipping &amp; Handling Included</p>
           <span>Features:</span>
-            <ul class="product-features">
+            <ul className="product-features">
               <li>1-Year iFit® Coach Membership Included</li>
               <li> Custom-Focus Weight Loss Workouts with Weight Entry</li>
               <li>3.0 CHP Motor</li>
@@ -44,46 +50,45 @@ class App extends Component {
         </div>
 
 
-        <div class="form-container">
+        <div className="form-container">
 				 <ul>
 				 		<li id="qty-input">
-				      <label for="minQtyText" class="offscreen">Qty</label>
-								<input type="tel" id="minQtyText" class="form-control valid" name="quantity" maxlength="3" value="1"/>
+				      <label className="offscreen">Qty</label>
+								<input type="tel" id="minQtyText" className="form-control valid" name="quantity" placeholder="1"/>
 				    </li>
 
             <li id="add-to-cart">
-              <input type="button" id="add-to-cart-btn" value="Add to Cart" class="primary" name="add-to-cart"/>
+              <input type="button" id="add-to-cart-btn" value="Add to Cart" className="primary" name="add-to-cart"/>
             </li>
 				</ul>
 			</div>
 
 
-      <div class="style-check compare-container">
+      <div className="style-check compare-container">
         <input id="compare" type="checkbox" name="compare-product" value="true" />
           <span>Compare Product</span>
       </div>
 
 
-      <span class="social-media">Share</span>
-	      <ul class="social list-inline">
-          <li class="social-icon" onclick="COSTCO.Social.shareWindow('facebook')">
-            <label class="hide">facebook</label>
-            <i class="fi-social-facebook"></i>
+      <span className="social-media">Share</span>
+	      <ul className="social list-inline">
+          <li className="social-icon" >
+            <label className="hide">facebook</label>
+            <i className="fi-social-facebook"></i>
           </li>
-          <li class="social-icon" onclick="COSTCO.Social.shareWindow('twitter')">
-            <label class="hide">twitter</label>
-            <i class="fi-social-twitter"></i>
+          <li className="social-icon" >
+            <label className="hide">twitter</label>
+            <i className="fi-social-twitter"></i>
           </li>
-          <li class="social-icon" onclick="COSTCO.Social.shareWindow('pinterest')">
-            <label class="hide">pinterestt</label>
-            <i class="fi-social-pinterest"></i>
+          <li className="social-icon" >
+            <label className="hide">pinterestt</label>
+            <i className="fi-social-pinterest"></i>
           </li>
-          <li class="social-icon" onclick="COSTCO.Social.shareWindow('google')">
-            <label class="hide">google</label>
-            <i class="fi-social-google-plus"></i>
+          <li className="social-icon" >
+            <label className="hide">google</label>
+            <i className="fi-social-google-plus"></i>
           </li>
         </ul>
-
       </div>
     );
   }
