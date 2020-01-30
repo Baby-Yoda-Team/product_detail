@@ -1,27 +1,34 @@
 const mongoose = require('mongoose');
- //mongoose.connect('mongodb://localhost/fetcher'); // mongourl
+const mongoUri ='mongodb://127.0.0.1:27017/costco'
+mongoose.connect(mongoUri)
 
-let practiceSchema = mongoose.Schema({
-  // TODO: your schema here!
-  title:  String, // String is shorthand for {type: String}
-  author: String,
-  body:   String
-  console.log('the practice schema is working ')
+ var db = mongoose.connection;
+ db.on('error', () => {
+  console.log('MongoDB connection error:')
+ });
+ db.once('open',() => {
+   console.log('MongoDB connected successfully!!')
+ });
+
+
+let productDetailSchema = new mongoose.Schema({
+
+  productId: { type: Number, unique: true },
+  productName: String,
+  productItemNumber: { type: Number, unique: true },
+  productPrice: Number,
+  productFeatures: {
+    stringOne: String,
+    stringTwo: String,
+    stringThree: String,
+    stringFour: String,
+    stringFive: String
+  }
 });
 
-let Repo = mongoose.model('Repo', practiceSchema);
-console.log(Repo)
+let ProductDetail = mongoose.model('ProductDetail', productDetailSchema);
 
 
-var newPractice = new Repo()
-
-
-// let save = (/* TODO */) => {
-//   // TODO: Your code here
-//   // This function should save a repo or repos to
-//   // the MongoDB
-// }
-
-
-
-module.exports.save = save;
+module.exports = db;
+// module.exports.save = save;
+module.exports.ProductDetail = ProductDetail;
