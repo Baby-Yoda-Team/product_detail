@@ -34,7 +34,7 @@ class App extends React.Component {
         dbData: data.data,
         mount: true
       })
-      console.log(this.state.dbData)
+      // console.log(this.state.dbData)
     })
   }
 
@@ -45,13 +45,14 @@ class App extends React.Component {
     console.log('I have the detailsData inside the render here', detailsData)
 
     if(this.state.mount) {
-      console.log('console logging a obj zero', detailsData[0].productName)
+      // console.log('console logging a obj zero', detailsData[0].productName)
+      // console.log('console logging the features in the obj zero', detailsData[0].productFeatures)
 
       components = (
         <div>
           <Top product={detailsData[0]}/>
           <Price product={detailsData[0]}/>
-          <Features product={detailsData[0]}/>
+          <Features product={detailsData[0].productFeatures}/>
           <AddCart product={detailsData[0]}/>
           <Compare product={detailsData[0]}/>
           <Share product={detailsData[0]}/>

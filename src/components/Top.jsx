@@ -8,7 +8,7 @@ const Top = ({product})  => {
     <span className="stars-rating">  ★★★★★  </span>
     <span className="ratingValue">3.0</span>
     <span className="reviewCount">(366)</span>
-    <p>Item &nbsp;<span>some random number</span></p>
+    <p>Item &nbsp;<span>{product.productItemNumber}</span></p>
   </div>
 
   );
