@@ -7,7 +7,7 @@ body {
 }
 
 .header-img {
-  width: 100%;
+  width: 100vw;
   height: 200px;
   background-image:url('../img/header_costco.jpg');
   background-size: cover;

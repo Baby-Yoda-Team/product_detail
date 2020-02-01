@@ -29,6 +29,7 @@ let productDetailSchema = new mongoose.Schema({
 let ProductDetail = mongoose.model('ProductDetail', productDetailSchema);
 
 
-module.exports = db;
-// module.exports.save = save;
-module.exports.ProductDetail = ProductDetail;
+module.exports = {
+  db,
+  ProductDetail
+}
