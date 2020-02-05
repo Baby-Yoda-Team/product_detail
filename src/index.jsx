@@ -72,4 +72,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+//change it to notapp
+ReactDOM.render(<App/>, document.getElementById('notapp'));
