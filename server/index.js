@@ -5,21 +5,22 @@ const bodyParser = require('body-parser');
 const {ProductDetail} = require('../db/index.js')
 
 const app = express();
-const PORT = 3000;
+const PORT = 3008;
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/:productId', express.static(path.join(__dirname, '../client/dist')));
 
 
 //get all the data call
-app.get('/api/details', function(req, res) {
-  // res.status(200).send('hello')
+app.get('/api/details/:productId', function(req, res) {
+  const { productId } = req.params;
+  console.log(productId)
   console.log('I am inside the api/details')
-  ProductDetail.find({})
+  ProductDetail.findOne({ productId })
   .then((details) => {
     res.status(200).send(details)
   })
@@ -28,6 +29,8 @@ app.get('/api/details', function(req, res) {
     console.log('Error inside the api details call', err)
   })
 });
+
+
 
 
 

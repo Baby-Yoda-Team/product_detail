@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUri ='mongodb://127.0.0.1:27017/costco'
+const mongoUri ='mongodb://127.0.0.1:27017/costcoproductdetails'
 mongoose.connect(mongoUri)
 
  var db = mongoose.connection;
@@ -15,15 +15,10 @@ let productDetailSchema = new mongoose.Schema({
 
   productId: { type: Number, unique: true },
   productName: String,
+  productReviewCount: String,
   productItemNumber: { type: Number, unique: true },
   productPrice: Number,
-  productFeatures: {
-    stringOne: String,
-    stringTwo: String,
-    stringThree: String,
-    stringFour: String,
-    stringFive: String
-  }
+  productFeatures: Array
 });
 
 let ProductDetail = mongoose.model('ProductDetail', productDetailSchema);

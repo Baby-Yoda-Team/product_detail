@@ -1,55 +1,71 @@
 import React from 'react'
+import styled from 'styled-components'
 
+
+//!STYLE COMPONENTS
+const ShareStyled = styled.div`
+  display:flex;
+  justify-content: flex-end;
+  width:50%;
+`
+const Fb = styled.div`
+  color:#3C5A99;
+  cursor:pointer;
+  font-size:25px;
+`
+const Tw = styled.div`
+  color:#37ACED;
+  cursor:pointer;
+  font-size:25px;
+`
+const Pin = styled.div`
+  color:#D13D41;
+  cursor:pointer;
+  font-size:25px;
+`
+const Gl = styled.div`
+  color:#CF3C27;
+  cursor:pointer;
+  font-size:25px;
+`
+const Line = styled.div`
+  padding: 0 5px;
+`
+
+//!My DIV
 const Share = ({product})  => {
 
   return(
-    <div className="social-media">
+    <ShareStyled>
       <span className="social-media">Share</span>
-        <ul className="social list-inline">
-          <li className="social-icon" >
-            <label className="hide">facebook</label>
-            <i className="fi-social-facebook"></i>
-          </li>
-          <li className="social-icon" >
-            <label className="hide">twitter</label>
-            <i className="fi-social-twitter"></i>
-          </li>
-          <li className="social-icon" >
-            <label className="hide">pinterestt</label>
-            <i className="fi-social-pinterest"></i>
-          </li>
-          <li className="social-icon" >
-            <label className="hide">google</label>
-            <i className="fi-social-google-plus"></i>
-          </li>
-        </ul>
-  </div>
+      <Line>
+        <Fb>
+          <i className="fi-social-facebook"></i>
+        </Fb>
+      </Line>
+
+      <Line>
+        <Tw>
+          <i className="fi-social-twitter"></i>
+        </Tw>
+      </Line>
+
+      <Line>
+        <Pin>
+          <i className="fi-social-pinterest"></i>
+        </Pin>
+      </Line>
+
+      <Line>
+        <Gl>
+          <i className="fi-social-google-plus"></i>
+        </Gl>
+      </Line>
+
+    </ShareStyled>
   );
 };
 
 export default Share;
 
 
-
-
-{/* <div className="social-media">
-        <span className="social-media">Share</span>
-          <ul className="social list-inline">
-            <li className="social-icon" >
-              <label className="hide">facebook</label>
-              <i className="fi-social-facebook"></i>
-            </li>
-            <li className="social-icon" >
-              <label className="hide">twitter</label>
-              <i className="fi-social-twitter"></i>
-            </li>
-            <li className="social-icon" >
-              <label className="hide">pinterestt</label>
-              <i className="fi-social-pinterest"></i>
-            </li>
-            <li className="social-icon" >
-              <label className="hide">google</label>
-              <i className="fi-social-google-plus"></i>
-            </li>
-          </ul>
-      </div> */}

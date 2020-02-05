@@ -1,11 +1,26 @@
 import React from 'react'
+import styled from 'styled-components'
+
+
+//!STYLE COMPONENTS
+const Text = styled.span`
+  color:#333333;
+  cursor:pointer;
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif;
+`
 
 const Compare = ({product})  => {
 
   return(
-    <div className="style-check compare-container">
-      <input id="compare" type="checkbox" name="compare-product" value="true" />
-        <span>Compare Product</span>
+    <div className="compare-container">
+
+
+      <input id="compare" type="checkbox" />
+
+      <Text>
+        <span>   Compare Product</span>
+      </Text>
     </div>
   );
 };
@@ -13,11 +28,3 @@ const Compare = ({product})  => {
 export default Compare;
 
 
-
-
-
-
-{/* <div className="style-check compare-container">
-        <input id="compare" type="checkbox" name="compare-product" value="true" />
-        <span>Compare Product</span>
-      </div> */}
