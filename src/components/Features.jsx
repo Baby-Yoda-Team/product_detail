@@ -1,36 +1,38 @@
 import React from 'react'
+import faker from 'faker'
+import styled from 'styled-components'
 
-const Features = ({product})  => {
+
+//!STYLE COMPONENTS
+const FeaturesStyled = styled.span`
+  color:#333333;
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif;
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+`
+
+
+
+const Features = ({ product })  => {
+  const { productFeatures } = product;
+  console.log('features --->', productFeatures)
 
   return(
-    <div className="features-container">
-    <p id="shipping-statement">Shipping &amp; Handling Included</p>
-    <span>Features:</span>
-      <ul className="product-features">
-        <li>{product.stringOne}</li>
-        <li>{product.stringTwo}</li>
-        <li>{product.stringThree}</li>
-        <li>{product.stringFour}</li>
-        <li>{product.stringFive}</li>
 
-      </ul>
-  </div>
+
+      <FeaturesStyled>
+        <span>Features:</span>
+          <ul className="product-features">
+            {productFeatures.map((feature, i) => <li key={faker.lorem.slug()+i}>{feature}</li>)}
+          </ul>
+      </FeaturesStyled>
 
   );
 };
 
 export default Features;
 
-
-
-{/* <div className="features-container">
-          <p id="shipping-statement">Shipping &amp; Handling Included</p>
-          <span>Features:</span>
-            <ul className="product-features">
-              <li>1-Year iFit® Coach Membership Included</li>
-              <li> Custom-Focus Weight Loss Workouts with Weight Entry</li>
-              <li>3.0 CHP Motor</li>
-              <li>20” x 60” Tread Belt</li>
-              <li>Tablet Not Included</li>
-            </ul>
-        </div> */}
