@@ -24,7 +24,20 @@ let productDetailSchema = new mongoose.Schema({
 let ProductDetail = mongoose.model('ProductDetail', productDetailSchema);
 
 
+let productDbData = (cb) => {
+  ProductDetail.find().exec((error, data) => {
+    if(error){
+      // console.log('there is an error in this query);
+      cb(error)
+    } else {
+      cb(data);
+      //console.log('the data from productDbData)
+    }
+  });
+}
+
 module.exports = {
   db,
-  ProductDetail
+  ProductDetail,
+  productDbData
 }
