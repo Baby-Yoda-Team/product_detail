@@ -2,11 +2,10 @@ var faker = require('faker');
 const {db, ProductDetail} = require('./index.js');
 
 
-
 //create an empty array
 var allProductDetails = []
 //loop over it
-for (var i = 1; i < 100; i++) {
+for (var i = 1; i <= 100; i++) {
   let productDetail = {
     productId: i,
     productName: faker.commerce.productName(),
