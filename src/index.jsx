@@ -27,7 +27,11 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    var productId = window.location.pathname.split('/').join('') || 1;
+    var params = new URLSearchParams(window.location.search);
+    console.log(params)
+    var productId = params.get('item_number') || 1;
+
+    // var productId = window.location.pathname.split('/').join('') || 1;
     console.log(productId)
 
     //deconstruct the dbData
@@ -49,12 +53,10 @@ class App extends React.Component {
 
 
   render() {
-    const detailsData = this.state.dbData
+    // const detailsData = this.state.dbData
 
     const { product } = this.state;
     console.log('I have the product inside the render here', product)
-    //   // console.log('console logging a obj zero', detailsData[0].productName)
-    //   // console.log('console logging the features in the obj zero', detailsData[0].productFeatures)
 
     return (
       !this.state.product ? null :
