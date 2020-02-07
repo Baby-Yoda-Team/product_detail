@@ -11,13 +11,19 @@ const PORT = 3008;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
-app.use('/:productId', express.static(path.join(__dirname, '../client/dist')));
+// this the GATE
+app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 
 //get all the data call
-app.get('/api/details/:productId', function(req, res) {
-  const { productId } = req.params;
+app.get('/api/details', function(req, res) {
+  let productId = req.query.productId
   console.log(productId)
   console.log('I am inside the api/details')
   ProductDetail.findOne({ productId })
