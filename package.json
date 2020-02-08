@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "react-dev": "webpack -d -w",
+    "build-prod": "webpack -p --mode production",
     "start": "nodemon ./server/index.js",
     "seed": "node db/seed.js"
   },
