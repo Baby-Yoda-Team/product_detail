@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 //!STYLE COMPONENTS
-const Text = styled.span`
+const TextCompare = styled.span`
   color:#333333;
   cursor:pointer;
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -18,9 +18,9 @@ const Compare = ({product})  => {
 
       <input id="compare" type="checkbox" />
 
-      <Text>
+      <TextCompare>
         <span>   Compare Product</span>
-      </Text>
+      </TextCompare>
     </div>
   );
 };

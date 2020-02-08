@@ -28,7 +28,7 @@ const Gl = styled.div`
   cursor:pointer;
   font-size:25px;
 `
-const Line = styled.div`
+const LineShare = styled.div`
   padding: 0 5px;
 `
 
@@ -38,29 +38,29 @@ const Share = ({product})  => {
   return(
     <ShareStyled>
       <span className="social-media">Share</span>
-      <Line>
+      <LineShare>
         <Fb>
           <i className="fi-social-facebook"></i>
         </Fb>
-      </Line>
+      </LineShare>
 
-      <Line>
+      <LineShare>
         <Tw>
           <i className="fi-social-twitter"></i>
         </Tw>
-      </Line>
+      </LineShare>
 
-      <Line>
+      <LineShare>
         <Pin>
           <i className="fi-social-pinterest"></i>
         </Pin>
-      </Line>
+      </LineShare>
 
-      <Line>
+      <LineShare>
         <Gl>
           <i className="fi-social-google-plus"></i>
         </Gl>
-      </Line>
+      </LineShare>
 
     </ShareStyled>
   );

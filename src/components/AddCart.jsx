@@ -8,11 +8,11 @@ const ClassAddCart = styled.div`
   width:50%;
 `
 
-const Line = styled.div`
+const LineCart = styled.div`
   padding: 0 5px;
 `
 
-const Button = styled.button`
+const ButtonCart = styled.button`
   background-color: #3071a9;
   color:white;
   width: 185px;
@@ -22,12 +22,12 @@ const Button = styled.button`
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
   font-family: 'Roboto', sans-serif;
 `
-const Text = styled.span`
+const TextCart = styled.span`
   color:#333333;
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
   font-family: 'Roboto', sans-serif;
 `
-const Box = styled.button`
+const BoxCart = styled.button`
   background-color:white;
   border-color: #9c9c9c;
   color:#333333;
@@ -42,24 +42,24 @@ const AddCart = ({product})  => {
 
   return(
     <ClassAddCart>
-      <Line>
-          <Text>
+      <LineCart>
+          <TextCart>
             <label>Qty</label>
-          </Text>
-      </Line>
+          </TextCart>
+      </LineCart>
 
-      <Line>
-        <Box>
+      <LineCart>
+        <BoxCart>
         {/* <input type="tel" placeholder="1"/> */}
         1
-        </Box>
-      </Line>
+        </BoxCart>
+      </LineCart>
 
-      <Line>
-        <Button>
+      <LineCart>
+        <ButtonCart>
             Add to Cart
-        </Button>
-      </Line>
+        </ButtonCart>
+      </LineCart>
 
     </ClassAddCart>
   );
