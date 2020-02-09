@@ -6,8 +6,8 @@ import styled from 'styled-components'
 const TextCompare = styled.span`
   color:#333333;
   cursor:pointer;
-  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-  font-family: 'Roboto', sans-serif;
+  /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif; */
 `
 
 const Compare = ({product})  => {

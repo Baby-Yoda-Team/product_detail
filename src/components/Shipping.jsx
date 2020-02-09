@@ -5,8 +5,8 @@ import styled from 'styled-components'
 //!STYLE COMPONENTS
 const ShippingStyled= styled.p`
   color:#333333;
-  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-  font-family: 'Roboto', sans-serif;
+  /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif; */
   display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
