@@ -18,8 +18,8 @@ const PriceStyled = styled.span`
 `
 const Value = styled.span`
   color:#333333;
-  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-  font-family: 'Roboto', sans-serif;
+  /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  font-family: 'Roboto', sans-serif; */
   font-size:2.25rem;
   box-sizing: border-box;
 `
