@@ -19,21 +19,15 @@ const ButtonCart = styled.button`
   border: zero;
   padding: 0.8em 3em;
   cursor:pointer;
-  /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-  font-family: 'Roboto', sans-serif; */
 `
 const TextCart = styled.span`
   color:#333333;
-  /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-  font-family: 'Roboto', sans-serif; */
 `
 const BoxCart = styled.button`
   background-color:white;
   border-color: #9c9c9c;
   color:#333333;
   font-size:.5em;
-  /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-  font-family: 'Roboto', sans-serif; */
   padding: 6px 12px;
 
 `
